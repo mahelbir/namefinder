@@ -19,7 +19,7 @@ public class ModelHelper {
     private static final String RESOURCE_PATH = "src/main/resources/";
 
     public static String[] sentences(String body) {
-        try (InputStream modelIn = new FileInputStream(RESOURCE_PATH + "opennlp-en-ud-ewt-sentence-1.0-1.9.3.bin")) {
+        try (InputStream modelIn = new FileInputStream(RESOURCE_PATH + "en-sent.bin")) {
             SentenceModel model = new SentenceModel(modelIn);
             SentenceDetectorME sentenceDetector = new SentenceDetectorME(model);
             return sentenceDetector.sentDetect(body);
@@ -31,7 +31,7 @@ public class ModelHelper {
 
     public static String[] tokens(String[] sentences) {
         LinkedList<String> tokens = new LinkedList<>();
-        try (InputStream modelIn = new FileInputStream(RESOURCE_PATH + "opennlp-en-ud-ewt-tokens-1.0-1.9.3.bin")) {
+        try (InputStream modelIn = new FileInputStream(RESOURCE_PATH + "en-token.bin")) {
             TokenizerModel model = new TokenizerModel(modelIn);
             Tokenizer tokenizer = new TokenizerME(model);
             for (String sentence : sentences)
