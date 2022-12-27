@@ -13,7 +13,7 @@ mvn clean package
 ## Usage
 
 ```bash
-java -jar target/bim207hw.jar <URL>
+java -jar target/NameFinder.jar <URL>
 ```
 
 ## License
