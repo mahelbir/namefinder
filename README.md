@@ -1,6 +1,6 @@
 # NameFinder
 
-Source code of simple Java program to find person names from any English website with OpenNLP
+A machine learning application with pre-trained models (OpenNLP) that finds English names on websites with given URLs as input.
 
 ## Installation
 
@@ -18,4 +18,4 @@ java -jar target/NameFinder.jar <URL>
 
 ## License
 
-The MIT License (MIT). Please see [License File](LISENCE) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
